@@ -64,11 +64,12 @@ public class LinkedQueue<Item> implements Iterable<Item>
         return item;
     }
 
-    public String toString() {
-        StringBuilder s = new StringBuilder();
+    public String toString()
+    {
+        StringBuilder st = new StringBuilder();
         for (Item item : this)
-            s.append(item + " ");
-        return s.toString();
+            st.append(item + " ");
+        return st.toString();
     } 
 
     private boolean check() {
