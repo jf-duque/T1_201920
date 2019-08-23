@@ -4,43 +4,52 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 
-public class LinkedQueue<Item> implements Iterable<Item> {
+public class LinkedQueue<Item> implements Iterable<Item> 
+{
     private int n;         
     private Node first;    
     private Node last;     
 
-    private class Node {
+    private class Node 
+    {
         private Item item;
         private Node next;
     }
 
-    public LinkedQueue() {
+    public LinkedQueue() 
+    {
         first = null;
         last  = null;
         n = 0;
         assert check();
     }
 
-    public boolean isEmpty() {
+    public boolean isEmpty() 
+    {
         return first == null;
     }
 
-    public int size() {
+    public int size() 
+    {
         return n;     
     }
 
-    public Item peek() {
+    public Item peek() 
+    {
         if (isEmpty()) throw new NoSuchElementException("Queue underflow");
         return first.item;
     }
 
-    public void enqueue(Item item) {
+    public void enqueue(Item item)
+    {
         Node oldlast = last;
         last = new Node();
         last.item = item;
         last.next = null;
-        if (isEmpty()) first = last;
-        else           oldlast.next = last;
+        if (isEmpty()) 
+        first = last;
+        else           
+        oldlast.next = last;
         n++;
         assert check();
     }

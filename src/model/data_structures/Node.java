@@ -1,28 +1,29 @@
 package model.data_structures;
 
-public class Node 
+public class Node<Item>
 {
-	public Object valor;
-	public Node siguiente=null; 	
+	private Item value;
 	
-	public Node(Object valor)
+	private Node<Item> next; 	
+	
+	public Node(Item pValue, Node<Item> pNext)
 	{
-		this.valor = valor;
-		this.siguiente = null;
+		this.value = pValue;
+		this.next = pNext;
 	}
 	
-	public Object obtenerValor()
+	public Item getValue()
 	{
-		return valor;
+		return value;
 	}
 	
-	public void enlazarSiguiente(Node n)
+	public void enlazarSiguiente(Node<Item> n)
 	{
-		siguiente=n;
+		next=n;
 	}
 	
-	public Node obtenerSiguiente()
+	public Node<Item> getNextNode()
 	{
-		return siguiente;
+		return next;
 	}
 }
