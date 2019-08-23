@@ -7,4 +7,4 @@ Jhoan Sebastian Diaz Salamanca
 2019-2 
 
 jhoan es marica
-
+jesus es un marica
